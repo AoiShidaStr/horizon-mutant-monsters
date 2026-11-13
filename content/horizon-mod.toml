@@ -1,0 +1,8 @@
+id = "mutant_monsters"
+name = "Mutant Monsters"
+version = "0.2.0"
+description = "Mutant Zombie (slam, throw, roar, three lives), Mutant Creeper (jump blast, charge, death blast) and Mutant Skeleton (swing, rib crush, arrows, multi-shot) bosses, Hulk Hammer and Chemical X. A Horizon port of Fuzs' Mutant Monsters (AGPL-3.0); original textures. Source: see README.md."
+authors = ["shcott21", "Chumbanotz", "Fuzs", "tdstress", "Horizon port by the Saison 2 server"]
+api = "0.2"
+side = "both"
+capabilities = ["registries"]

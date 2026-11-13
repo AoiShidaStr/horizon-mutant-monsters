@@ -1,0 +1,1 @@
+{ "parent": "minecraft:item/handheld", "textures": { "layer0": "mutant_monsters:item/hulk_hammer" } }

@@ -1,0 +1,4 @@
+{
+  "type": "minecraft:entity",
+  "random_sequence": "mutant_monsters:entities/mutant_skeleton"
+}

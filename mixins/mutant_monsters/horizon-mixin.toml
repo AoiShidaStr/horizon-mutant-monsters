@@ -1,0 +1,18 @@
+# Mutant Monsters, the native half (docs/native-mods.md, "Trait mods").
+#
+# The launcher builds `api/` into the game and calls its `hooks()`. A trait mod
+# only: no injections, so no Horizon source line is patched.
+#
+# AGPL-3.0: this crate is a translation of Mutant Monsters' Java code. The
+# full corresponding source (this crate, and the Java it comes from in the
+# mod folder's upstream/) ships with every build; see ../../README.md.
+[mod]
+id = "mutant_monsters"
+version = "0.2.0"
+
+# The Horizon revision this bundle was written and checked against.
+[compatibility]
+horizon_revision = "a85af177a82504f357ff10d5d40d0b7230e2ac32"
+
+[api]
+path = "api"

@@ -1,0 +1,14 @@
+[package]
+name = "mod-mutant_monsters"
+version = "0.2.0"
+edition = "2024"
+license = "AGPL-3.0-only"
+description = "Mutant Monsters (Fuzs et al., AGPL-3.0) ported to Horizon: Mutant Zombie, Mutant Creeper, Mutant Skeleton, Hulk Hammer, Chemical X."
+
+[lib]
+name = "mutant_monsters"
+path = "src/lib.rs"
+
+[dependencies]
+# The launcher points this at the Horizon source it builds the game from.
+horizon-client = { git = "https://github.com/horizon-rust/horizon", rev = "a85af177a82504f357ff10d5d40d0b7230e2ac32" }

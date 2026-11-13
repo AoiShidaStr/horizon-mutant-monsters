@@ -1,0 +1,6 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [ "minecraft:splash_potion", "mutant_monsters:hulk_hammer" ],
+  "result": { "id": "mutant_monsters:chemical_x", "count": 1 }
+}

@@ -1,0 +1,4 @@
+# Local build output (see README.md, "Build").
+.build/
+target/
+.freebuff-task.md

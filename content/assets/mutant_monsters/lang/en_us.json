@@ -1,0 +1,14 @@
+{
+  "entity.mutant_monsters.mutant_zombie": "Mutant Zombie",
+  "entity.mutant_monsters.mutant_creeper": "Mutant Creeper",
+  "entity.mutant_monsters.chemical_x": "Chemical X",
+  "item.mutant_monsters.hulk_hammer": "Hulk Hammer",
+  "item.mutant_monsters.chemical_x": "Chemical X",
+  "itemGroup.mutant_monsters": "Mutant Monsters",
+  "entity.mutant_monsters.mutant_skeleton": "Mutant Skeleton",
+  "item.mutant_monsters.mutant_skeleton_limb": "Mutant Skeleton Limb",
+  "item.mutant_monsters.mutant_skeleton_pelvis": "Mutant Skeleton Pelvis",
+  "item.mutant_monsters.mutant_skeleton_rib": "Mutant Skeleton Rib",
+  "item.mutant_monsters.mutant_skeleton_shoulder_pad": "Mutant Skeleton Shoulder Pad",
+  "item.mutant_monsters.mutant_skeleton_skull": "Mutant Skeleton Skull"
+}

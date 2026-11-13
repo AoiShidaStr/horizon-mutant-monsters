@@ -1,0 +1,57 @@
+package fuzs.mutantmonsters.common.client.renderer.rendertype;
+
+import com.mojang.blaze3d.vertex.DefaultVertexFormat;
+import com.mojang.renderpearl.api.pipeline.BlendFactor;
+import com.mojang.renderpearl.api.pipeline.BlendFunction;
+import com.mojang.renderpearl.api.pipeline.ColorTargetState;
+import com.mojang.renderpearl.api.pipeline.DepthStencilState;
+import com.mojang.renderpearl.api.pipeline.PrimitiveTopology;
+import com.mojang.renderpearl.api.pipeline.RenderPipeline;
+import fuzs.mutantmonsters.common.MutantMonsters;
+import net.minecraft.client.renderer.BindGroupLayouts;
+import net.minecraft.client.renderer.RenderPipelines;
+import net.minecraft.client.renderer.rendertype.RenderSetup;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.TextureTransform;
+import net.minecraft.resources.Identifier;
+
+public final class ModRenderTypes {
+    public static final BlendFunction ALPHA_BLEND_FUNCTION = new BlendFunction(BlendFactor.SRC_ALPHA,
+            BlendFactor.ONE_MINUS_SRC_ALPHA);
+    /**
+     * @see RenderPipelines#ENERGY_SWIRL
+     */
+    public static final RenderPipeline ENERGY_SWIRL_RENDER_PIPELINE = (RenderPipeline.builder(RenderPipelines.MATRICES_FOG_SNIPPET)
+            .withLocation(MutantMonsters.id("pipeline/energy_swirl"))
+            .withVertexShader("core/entity")
+            .withFragmentShader("core/entity")
+            .withShaderDefine("ALPHA_CUTOUT", 0.1F)
+            .withShaderDefine("EMISSIVE")
+            .withShaderDefine("NO_OVERLAY")
+            .withShaderDefine("NO_CARDINAL_LIGHTING")
+            .withShaderDefine("APPLY_TEXTURE_MATRIX")
+            .withBindGroupLayout(BindGroupLayouts.SAMPLER0)
+            .withColorTargetState(new ColorTargetState(ALPHA_BLEND_FUNCTION))
+            .withCull(false)
+            .withVertexBinding(0, DefaultVertexFormat.ENTITY)
+            .withPrimitiveTopology(PrimitiveTopology.QUADS)
+            .withDepthStencilState(DepthStencilState.DEFAULT)
+            .build());
+
+    private ModRenderTypes() {
+        // NO-OP
+    }
+
+    /**
+     * @see net.minecraft.client.renderer.rendertype.RenderTypes#energySwirl(Identifier, float, float)
+     */
+    public static RenderType energySwirl(Identifier identifier, float u, float v) {
+        return RenderType.create(MutantMonsters.id("energy_swirl").toString(),
+                RenderSetup.builder(ENERGY_SWIRL_RENDER_PIPELINE)
+                        .withTexture("Sampler0", identifier)
+                        .setTextureTransform(new TextureTransform.OffsetTextureTransform(u, v))
+                        .useOverlay()
+                        .sortOnUpload()
+                        .createRenderSetup());
+    }
+}

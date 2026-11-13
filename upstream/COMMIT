@@ -1,0 +1,5 @@
+https://github.com/Fuzss/mutantmonsters
+branch 26.3.x
+commit 0a8e21bd9c3d0c91567c955bb97fad23b423021d (2026-10-17)
+Only Common/src/main/java (code) and Common/src/generated/resources/data (datagen output of that code) are kept here.
+Textures, sounds and pack.png are All Rights Reserved (LICENSE-ASSETS.md) and are NOT included.

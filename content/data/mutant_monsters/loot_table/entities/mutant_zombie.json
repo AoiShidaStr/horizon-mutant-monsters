@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:entity",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [ { "type": "minecraft:item", "name": "mutant_monsters:hulk_hammer" } ]
+    }
+  ],
+  "random_sequence": "mutant_monsters:entities/mutant_zombie"
+}

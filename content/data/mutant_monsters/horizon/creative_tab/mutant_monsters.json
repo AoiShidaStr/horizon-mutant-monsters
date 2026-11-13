@@ -1,0 +1,13 @@
+{
+  "title": "itemGroup.mutant_monsters",
+  "icon": "mutant_monsters:hulk_hammer",
+  "items": [
+    "mutant_monsters:hulk_hammer",
+    "mutant_monsters:chemical_x",
+    "mutant_monsters:mutant_skeleton_limb",
+    "mutant_monsters:mutant_skeleton_pelvis",
+    "mutant_monsters:mutant_skeleton_rib",
+    "mutant_monsters:mutant_skeleton_shoulder_pad",
+    "mutant_monsters:mutant_skeleton_skull"
+  ]
+}

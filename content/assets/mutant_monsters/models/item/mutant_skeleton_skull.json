@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mutant_monsters:item/mutant_skeleton_skull"
+  }
+}

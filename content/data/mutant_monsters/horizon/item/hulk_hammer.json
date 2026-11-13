@@ -1,0 +1,16 @@
+{
+  "template": "minecraft:iron_sword",
+  "max_stack_size": 1,
+  "rarity": "uncommon",
+  "components": {
+    "minecraft:max_damage": 150,
+    "minecraft:enchantable": { "value": 15 },
+    "minecraft:weapon": { "item_damage_per_attack": 1, "disable_blocking_for_seconds": 10.0 },
+    "minecraft:tool": { "rules": [], "default_mining_speed": 1.0, "damage_per_block": 2, "can_destroy_blocks_in_creative": false },
+    "minecraft:attribute_modifiers": [
+      { "type": "minecraft:attack_damage", "id": "minecraft:base_attack_damage", "amount": 8.0, "operation": "add_value", "slot": "mainhand" },
+      { "type": "minecraft:attack_speed", "id": "minecraft:base_attack_speed", "amount": -2.9000000953674316, "operation": "add_value", "slot": "mainhand" }
+    ],
+    "!minecraft:repairable": {}
+  }
+}
