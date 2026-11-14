@@ -10,5 +10,10 @@
   "item.mutant_monsters.mutant_skeleton_pelvis": "Mutant Skeleton Pelvis",
   "item.mutant_monsters.mutant_skeleton_rib": "Mutant Skeleton Rib",
   "item.mutant_monsters.mutant_skeleton_shoulder_pad": "Mutant Skeleton Shoulder Pad",
-  "item.mutant_monsters.mutant_skeleton_skull": "Mutant Skeleton Skull"
+  "item.mutant_monsters.mutant_skeleton_skull": "Mutant Skeleton Skull",
+  "item.mutant_monsters.mutant_skeleton_arms": "Mutant Skeleton Arms",
+  "item.mutant_monsters.mutant_skeleton_rib_cage": "Mutant Skeleton Rib Cage",
+  "item.mutant_monsters.mutant_skeleton_chestplate": "Mutant Skeleton Chestplate",
+  "item.mutant_monsters.mutant_skeleton_leggings": "Mutant Skeleton Leggings",
+  "item.mutant_monsters.mutant_skeleton_boots": "Mutant Skeleton Boots"
 }

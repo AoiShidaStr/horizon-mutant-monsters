@@ -4,10 +4,15 @@
   "items": [
     "mutant_monsters:hulk_hammer",
     "mutant_monsters:chemical_x",
+    "mutant_monsters:mutant_skeleton_skull",
+    "mutant_monsters:mutant_skeleton_chestplate",
+    "mutant_monsters:mutant_skeleton_leggings",
+    "mutant_monsters:mutant_skeleton_boots",
+    "mutant_monsters:mutant_skeleton_arms",
+    "mutant_monsters:mutant_skeleton_rib_cage",
     "mutant_monsters:mutant_skeleton_limb",
     "mutant_monsters:mutant_skeleton_pelvis",
     "mutant_monsters:mutant_skeleton_rib",
-    "mutant_monsters:mutant_skeleton_shoulder_pad",
-    "mutant_monsters:mutant_skeleton_skull"
+    "mutant_monsters:mutant_skeleton_shoulder_pad"
   ]
 }

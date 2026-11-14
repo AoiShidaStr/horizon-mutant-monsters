@@ -15,7 +15,8 @@ turns a zombie, a creeper or a skeleton into its mutant.
 
 - Content mod `.hmod` (`side = "both"`): the `mutant_zombie`, `mutant_creeper`,
   `mutant_skeleton` and `chemical_x` entity types, the `hulk_hammer` and
-  `chemical_x` items, the five Mutant Skeleton bone items, a creative tab,
+  `chemical_x` items, the five Mutant Skeleton bone items and the four-piece
+  Mutant Skeleton armour set, a creative tab,
   the loot tables, damage types, tags, a Chemical X recipe, en_us/fr_fr names
   and original placeholder textures.
 - Native trait mod `.hnmod`: the Mutant Zombie's model and animations, its
@@ -101,6 +102,13 @@ creeper or a skeleton.
   - **Death**: it shatters at once. Everything living within 3 blocks takes
     7, and its eighteen bones fly off as items: 8 limbs, 6 ribs, 2 shoulder
     pads, a pelvis and a skull.
+- **Mutant Skeleton armour**: one kill's bones make one full set, as upstream.
+  The skull is the helmet; the shoulders and limbs make the arms (`S S` / two
+  rows of `L L`), six ribs a rib cage (`R R` three times), arms over rib cage
+  the chestplate, pelvis and two limbs the leggings, two limbs the boots. Iron's
+  defence and durability (2/5/6/2), enchantable; the boots add 0.2 jump
+  strength and 2 blocks of safe fall, the leggings +40% speed and 0.5 step
+  height. There is no custom worn texture, so a player wears it as iron.
 - **Hulk Hammer**: 9 attack damage, very slow (-2.9 speed), 150 uses,
   enchantable. Right-click the top of a block: a line of waves 1.5 to 8 blocks
   the way you face (6-8 damage to everything on them), 25-tick cooldown, one
@@ -114,9 +122,9 @@ creeper or a skeleton.
 
 ### Done
 
-- Content: entity types, items, creative tab, loot tables, damage types,
-  tags (`#minecraft:zombies`, `#mutant_monsters:mutants`), recipe, lang,
-  textures.
+- Content: entity types, items, the Mutant Skeleton armour set, creative tab,
+  loot tables, damage types, tags (`#minecraft:zombies`,
+  `#mutant_monsters:mutants`), recipes, lang, textures.
 - Mutant Zombie, translated from upstream: model (`createBodyLayer`), every
   pose of `setupAnim` (walk, breathing, head, slam, roar, throw with its hit
   and landing, fall and revival, death flip), goals, the three attacks,
@@ -191,12 +199,11 @@ creeper or a skeleton.
 - Mutant Enderman, Spider Pig and Mutant Snow Golem: not ported (their Java
   is in `upstream/`). Chemical X does nothing to endermen or pigs.
 - Mutant Skeleton: Horizon lets a mod mob copy a zombie, not a skeleton, so
-  it is a zombie-class mob playing vanilla skeleton and crossbow sounds. Not
-  ported: the crossbow drawn in its hand, the flying bone entities (the bones
-  are thrown as plain items, and don't hurt what they land on), the skeleton
-  armour set crafted from the bones and the placeable skull block (the bones
-  are plain items with no use yet), `AvoidDamageGoal` (it doesn't run from
-  fire or cactus), disabling a shield with the rib crush, the hunger arrows
+  it is a zombie-class mob playing vanilla skeleton and crossbow sounds.  Not ported: the crossbow drawn in its hand, the flying bone entities (the
+  bones are thrown as plain items, and don't hurt what they land on), the
+  placeable skull block (the skull is only worn), `AvoidDamageGoal` (it
+  doesn't run from fire or cactus), disabling a shield with the rib crush, the
+  hunger arrows
   (an arrow here carries one potion at most: poison, else slowness, as a
   tipped arrow's, so with a tipped arrow's durations). A left-handed
   skeleton is drawn right-handed.

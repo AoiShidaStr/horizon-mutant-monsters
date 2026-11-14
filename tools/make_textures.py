@@ -14,7 +14,7 @@ seeded noise and flat shapes:
   textures/entity/mutant_skeleton.png 128x128, laid out for the boxes of
                                        MutantSkeletonModel.createBodyLayer()
                                        (mixins/mutant_monsters/api/src/skeleton.rs)
-  textures/item/mutant_skeleton_*.png  16x16, the five body parts
+  textures/item/mutant_skeleton_*.png  16x16, the body parts and the armour set
   textures/item/hulk_hammer.png        16x16
   textures/item/chemical_x.png         16x16
 
@@ -236,6 +236,74 @@ def skeleton_skull():
     return img
 
 
+def armour_icon(cells, detail=(), pale=()):
+    """A 16x16 armour icon: `cells` are bone pixels, `detail` darker, `pale` lighter."""
+    img = bone_icon(sorted(cells))
+    for x, y in detail:
+        img.putpixel((x, y), jitter(BONE_DARK, 6))
+    for x, y in pale:
+        img.putpixel((x, y), jitter(BONE_PALE, 6))
+    return img
+
+
+def skeleton_arms():
+    cells = set()
+    for ox in (2, 9):
+        cells |= {(ox + x, y) for y in range(4, 10) for x in range(2)}  # the shaft
+        cells |= {(ox + x, y) for y in (2, 3, 10, 11) for x in range(4)}  # a knob at each end
+    detail = [(x, 3) for x in range(2, 15)]
+    detail += [(x, 10) for x in range(2, 15)]
+    pale = [(x, 6) for x in (2, 3, 9, 10)]
+    return armour_icon(cells, detail, pale)
+
+
+def skeleton_rib_cage():
+    cells = {(x, y) for y in range(2, 14) for x in range(7, 9)}     # the spine
+    for y in (8, 10, 12):
+        cells |= {(x, y) for x in range(3, 13)}
+        cells |= {(x, y + 1) for x in (2, 3, 12, 13)}       # each rib droops at its ends
+    cells |= {(x, y) for y in (3, 5, 7) for x in range(4, 12)}          # the top pair, tucked
+    cells |= {(3, 4), (12, 4), (3, 6), (12, 6), (4, 8), (11, 8)}
+    detail = [(x, 13) for x in range(2, 14)]
+    detail += [(x, 5) for x in range(4, 12, 2)]
+    detail += [(x, 11) for x in range(4, 12, 2)]
+    pale = [(7, y) for y in range(2, 14)]
+    return armour_icon(cells, detail, pale)
+
+
+def skeleton_chestplate():
+    cells = {(x, y) for y in range(2, 14) for x in range(2, 14)}
+    cells -= {(x, y) for x in range(6, 10) for y in (2, 3, 4)}       # the neck opening
+    cells -= {(x, y) for x in (2, 3) for y in (7, 8)}                # armholes
+    cells -= {(x, y) for x in (12, 13) for y in (7, 8)}
+    cells -= {(x, 13) for x in (2, 3, 12, 13)}                       # a tapered waist
+    detail = [(x, y) for y in (6, 9, 12) for x in range(5, 12)]
+    pale = [(x, 5) for x in range(4, 12)] + [(7, y) for y in range(5, 13)]
+    return armour_icon(cells, detail, pale)
+
+
+def skeleton_leggings():
+    cells = {(x, y) for y in range(2, 7) for x in range(2, 14)}      # the waist
+    cells |= {(x, y) for y in range(6, 14) for x in range(3, 7)}     # the two legs
+    cells |= {(x, y) for y in range(6, 14) for x in range(9, 13)}
+    detail = [(x, 2) for x in range(2, 14)]
+    detail += [(x, 6) for x in range(2, 14)]
+    detail += [(x, 10) for x in range(3, 13)]
+    pale = [(4, 8), (4, 9), (10, 8), (10, 9)]
+    return armour_icon(cells, detail, pale)
+
+
+def skeleton_boots():
+    cells = {(x, y) for y in range(3, 10) for x in range(3, 7)}
+    cells |= {(x, y) for y in range(10, 14) for x in range(2, 8)}
+    cells |= {(x, y) for y in range(3, 10) for x in range(10, 14)}
+    cells |= {(x, y) for y in range(10, 14) for x in range(9, 15)}
+    detail = [(x, 13) for x in range(2, 15)]
+    detail += [(x, 9) for x in range(2, 15)]
+    pale = [(4, 11), (5, 11), (11, 11), (12, 11)]
+    return armour_icon(cells, detail, pale)
+
+
 def hulk_hammer():
     img = Image.new("RGBA", (16, 16), (0, 0, 0, 0))
     # handle: a diagonal from bottom left
@@ -285,6 +353,11 @@ def main():
         ("rib", skeleton_rib),
         ("shoulder_pad", skeleton_shoulder_pad),
         ("skull", skeleton_skull),
+        ("arms", skeleton_arms),
+        ("rib_cage", skeleton_rib_cage),
+        ("chestplate", skeleton_chestplate),
+        ("leggings", skeleton_leggings),
+        ("boots", skeleton_boots),
     ):
         draw().save(os.path.join(TEX, "item", "mutant_skeleton_" + name + ".png"))
     hulk_hammer().save(os.path.join(TEX, "item", "hulk_hammer.png"))

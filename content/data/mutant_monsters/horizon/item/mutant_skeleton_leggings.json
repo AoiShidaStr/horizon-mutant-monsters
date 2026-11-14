@@ -1,0 +1,12 @@
+{
+  "template": "minecraft:iron_leggings",
+  "rarity": "uncommon",
+  "components": {
+    "minecraft:attribute_modifiers": [
+      { "type": "minecraft:armor", "id": "mutant_monsters:armor.leggings", "amount": 5.0, "operation": "add_value", "slot": "legs" },
+      { "type": "minecraft:armor_toughness", "id": "mutant_monsters:armor.leggings", "amount": 0.0, "operation": "add_value", "slot": "legs" },
+      { "type": "minecraft:movement_speed", "id": "mutant_monsters:armor.leggings", "amount": 0.4, "operation": "add_multiplied_total", "slot": "legs" },
+      { "type": "minecraft:step_height", "id": "mutant_monsters:armor.leggings", "amount": 0.5, "operation": "add_value", "slot": "legs" }
+    ]
+  }
+}

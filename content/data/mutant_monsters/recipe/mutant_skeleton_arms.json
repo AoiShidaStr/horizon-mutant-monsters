@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "S S",
+    "L L",
+    "L L"
+  ],
+  "key": {
+    "S": "mutant_monsters:mutant_skeleton_shoulder_pad",
+    "L": "mutant_monsters:mutant_skeleton_limb"
+  },
+  "result": { "id": "mutant_monsters:mutant_skeleton_arms", "count": 1 }
+}

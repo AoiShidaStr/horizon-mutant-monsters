@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "A",
+    "R"
+  ],
+  "key": {
+    "A": "mutant_monsters:mutant_skeleton_arms",
+    "R": "mutant_monsters:mutant_skeleton_rib_cage"
+  },
+  "result": { "id": "mutant_monsters:mutant_skeleton_chestplate", "count": 1 }
+}

@@ -1,0 +1,12 @@
+{
+  "template": "minecraft:iron_boots",
+  "rarity": "uncommon",
+  "components": {
+    "minecraft:attribute_modifiers": [
+      { "type": "minecraft:armor", "id": "mutant_monsters:armor.boots", "amount": 2.0, "operation": "add_value", "slot": "feet" },
+      { "type": "minecraft:armor_toughness", "id": "mutant_monsters:armor.boots", "amount": 0.0, "operation": "add_value", "slot": "feet" },
+      { "type": "minecraft:jump_strength", "id": "mutant_monsters:armor.boots", "amount": 0.2, "operation": "add_value", "slot": "feet" },
+      { "type": "minecraft:safe_fall_distance", "id": "mutant_monsters:armor.boots", "amount": 2.0, "operation": "add_value", "slot": "feet" }
+    ]
+  }
+}

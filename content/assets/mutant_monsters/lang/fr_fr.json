@@ -10,5 +10,10 @@
   "item.mutant_monsters.mutant_skeleton_pelvis": "Bassin de squelette mutant",
   "item.mutant_monsters.mutant_skeleton_rib": "Côte de squelette mutant",
   "item.mutant_monsters.mutant_skeleton_shoulder_pad": "Épaulière de squelette mutant",
-  "item.mutant_monsters.mutant_skeleton_skull": "Crâne de squelette mutant"
+  "item.mutant_monsters.mutant_skeleton_skull": "Crâne de squelette mutant",
+  "item.mutant_monsters.mutant_skeleton_arms": "Bras de squelette mutant",
+  "item.mutant_monsters.mutant_skeleton_rib_cage": "Cage thoracique de squelette mutant",
+  "item.mutant_monsters.mutant_skeleton_chestplate": "Plastron de squelette mutant",
+  "item.mutant_monsters.mutant_skeleton_leggings": "Jambières de squelette mutant",
+  "item.mutant_monsters.mutant_skeleton_boots": "Bottes de squelette mutant"
 }
