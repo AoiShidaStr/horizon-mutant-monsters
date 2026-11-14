@@ -102,13 +102,15 @@ creeper or a skeleton.
   - **Death**: it shatters at once. Everything living within 3 blocks takes
     7, and its eighteen bones fly off as items: 8 limbs, 6 ribs, 2 shoulder
     pads, a pelvis and a skull.
-- **Mutant Skeleton armour**: one kill's bones make one full set, as upstream.
-  The skull is the helmet; the shoulders and limbs make the arms (`S S` / two
-  rows of `L L`), six ribs a rib cage (`R R` three times), arms over rib cage
-  the chestplate, pelvis and two limbs the leggings, two limbs the boots. Iron's
-  defence and durability (2/5/6/2), enchantable; the boots add 0.2 jump
-  strength and 2 blocks of safe fall, the leggings +40% speed and 0.5 step
-  height. There is no custom worn texture, so a player wears it as iron.
+- **Mutant Skeleton armour**: the skull is the helmet; the shoulders and limbs
+  make the arms (`S S` / two rows of `L L`), six ribs a rib cage (`R R` three
+  times), arms over rib cage the chestplate, pelvis and two limbs the
+  leggings, two limbs the boots. Iron's defence and durability (2/5/6/2),
+  enchantable; the boots add 0.2 jump strength and 2 blocks of safe fall, the
+  leggings +40% speed and 0.5 step height. There is no custom worn texture, so
+  a player wears it as iron. One kill drops what arms, rib cage, chestplate,
+  boots and helmet take (8 limbs, 6 ribs, 2 pads, pelvis, skull); the
+  leggings need two more limbs from a second kill.
 - **Hulk Hammer**: 9 attack damage, very slow (-2.9 speed), 150 uses,
   enchantable. Right-click the top of a block: a line of waves 1.5 to 8 blocks
   the way you face (6-8 damage to everything on them), 25-tick cooldown, one
@@ -183,6 +185,14 @@ creeper or a skeleton.
   leftover ones took the hit meant for the test zombie; the Mutant Zombie
   itself was saved and loaded back).
 
+- **Skeleton armour set, 2026-11-14** (`tools/vps/mm-armour.sh`, the same
+  scratch dedicated server): the content loads with no error, the six new
+  items register and show their names (`Gave 1 [Mutant Skeleton Chestplate]`),
+  the five recipes unlock (`Unlocked 1 recipe(s)`), and a full set worn on a
+  player reads armor 15, armor toughness 0, speed 0.14 (0.1 x 1.4), step
+  height 1.1, jump strength 0.62 and safe fall distance 5.0 — upstream's
+  numbers. Crafting the pieces by hand and the worn look were not seen.
+
 ### Not done (known gaps)
 
 - **Never seen on a client.** The models, textures and animations compile
@@ -252,7 +262,8 @@ way the launcher does; `/opt/build/mm-check.sh full` runs `cargo check` for
 both flavours plus `cargo test`; `/opt/build/mm-build2.sh` builds the
 dedicated-server engine and checks the client flavour;
 `CREEPER=1 /opt/build/mm-smoke.sh` and `/opt/build/mm-smoke-skel.sh` run the
-headless smoke tests (copies of all these scripts are in `tools/vps/`). The pure modules
+headless smoke tests, and `/opt/build/mm-armour.sh` checks the skeleton armour
+set (copies of all these scripts are in `tools/vps/`). The pure modules
 also test alone:
 
 ```
