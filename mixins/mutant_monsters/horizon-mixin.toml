@@ -8,7 +8,7 @@
 # mod folder's upstream/) ships with every build; see ../../README.md.
 [mod]
 id = "mutant_monsters"
-version = "0.2.0"
+version = "0.3.0"
 
 # The Horizon revision this bundle was written and checked against.
 [compatibility]
